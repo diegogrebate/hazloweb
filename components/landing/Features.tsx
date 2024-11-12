@@ -38,6 +38,10 @@ const features = [
 
 export default function Features() {
   const [mounted, setMounted] = useState(false);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
   useEffect(() => {
     setMounted(true);
@@ -56,20 +60,18 @@ export default function Features() {
         </p>
       </div>
       <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-7 auto-rows-[200px] gap-4 mt-10 mx-auto">
+        <div
+          className="grid md:grid-cols-7 auto-rows-[200px] gap-4 mt-10 mx-auto"
+          ref={ref}
+        >
           {features.map((item, i) => {
             const isBigItem = i === 0 || i === 3;
             const isSmallItem = i === 1 || i === 2;
             const animationDirection = isBigItem ? "left" : "right";
-            const [ref, inView] = useInView({
-              triggerOnce: true,
-              threshold: 0.3,
-            });
 
             return (
               <motion.div
                 key={i}
-                ref={ref}
                 initial={{
                   opacity: 0,
                   x: animationDirection === "left" ? -100 : 100,

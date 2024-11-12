@@ -21,7 +21,7 @@ export function Hero() {
 
   useEffect(() => {
     if (!tabRef.current) return;
-    const { height, width } = tabRef.current?.getBoundingClientRect();
+    const { height, width } = tabRef.current.getBoundingClientRect();
     const circumference = height * 2 + width * 2;
 
     const times = [
@@ -40,6 +40,7 @@ export function Hero() {
     };
     animate(xPercentage, [0, 100, 100, 0, 0], options);
     animate(yPercentage, [0, 0, 100, 100, 0], options);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
