@@ -52,12 +52,12 @@ export function CTA() {
       .finally(() => setIsPending(false));
   };
   return (
-    <div className="bg-background text-white py-[72px] sm:py-24 text-center">
+    <div className="bg-background text-white py-[72px] sm:py-24 text-center px-8 lg:px-20">
       <div className="container max-w-xl mx-auto">
         <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">
           Be the First
         </h2>
-        <p className="text-xl text-white/70 mt-5">
+        <p className="text-md lg:text-xl text-white/70 mt-5">
           Don’t miss out! Join the HAZLO waitlist to connect, compete, and
           inspire. Be part of a sports community built to elevate your active
           lifestyle.

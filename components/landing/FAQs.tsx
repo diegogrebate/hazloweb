@@ -45,7 +45,7 @@ function AccordionItem({
         className="flex items-center border-b border-white/30 p-2"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="flex-1 text-lg font-bold">{question}</span>
+        <span className="flex-1 text-md lg:text-lg font-bold">{question}</span>
         {!isOpen ? <Plus /> : <Minus />}
       </div>
       <AnimatePresence>
@@ -66,6 +66,7 @@ function AccordionItem({
               height: 0,
               marginTop: 0,
             }}
+            className="text-sm lg:text-lg"
           >
             {answer}
           </motion.div>
@@ -77,9 +78,9 @@ function AccordionItem({
 
 export function FAQs() {
   return (
-    <div className="text-white bg-gradient-to-b from-[#364CE7] to-[#0E0E0E] py-[72px] sm:py-24">
+    <div className="text-white bg-gradient-to-b from-[#364CE7] to-[#0E0E0E] py-[72px] sm:py-24 px-8 lg:px-20">
       <div className="container mx-auto">
-        <h2 className="text-center text-5xl sm:text-6xl sm:max-w-[648px] mx-auto font-bold tracking-tighter">
+        <h2 className="text-center text-2xl lg:text-5xl sm:text-6xl sm:max-w-[648px] mx-auto font-bold tracking-tighter">
           Frecuently Asked Questions
         </h2>
         <div className="mt-12 max-w-[648px] mx-auto">

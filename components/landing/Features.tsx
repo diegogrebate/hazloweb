@@ -18,7 +18,7 @@ const features = [
     icon: Users,
     title: "Connect With Players",
     description:
-      "Discover and connectwith people who share you passion for sports, wether they 're nearby or part of a global community.",
+      "Discover and connect with people who share your passion for sports, whether they're nearby or part of a global community.",
     borderGradient:
       "linear-gradient(to right, rgba(0, 230, 118, 0.6), rgba(0, 153, 204, 0.6))",
   },
@@ -27,7 +27,7 @@ const features = [
     icon: Calendar,
     title: "Create and Join Events",
     description:
-      "Organize sports events with friends or join public events to meet new layers and get active together.",
+      "Organize sports events with friends or join public events to meet new players and get active together.",
     borderGradient:
       "linear-gradient(to right, rgba(34, 139, 229, 0.6), rgba(136, 60, 235, 0.6))",
   },
@@ -45,7 +45,7 @@ const features = [
     icon: HeartPulse,
     title: "Find and Provide Services",
     description:
-      "Access wellness services like nutricionists, physical therapists, sports psychologists, etc., to support every step of you journey wether you are improving fitness, recovering, or staying healthy.",
+      "Access wellness services like nutritionists, physical therapists, sports psychologists, etc., to support every step of your journey, whether you're improving fitness, recovering, or staying healthy.",
     borderGradient:
       "linear-gradient(to right, rgba(255, 77, 148, 0.6), rgba(153, 0, 153, 0.6))",
   },
@@ -63,12 +63,12 @@ export default function Features() {
   }, []);
 
   return (
-    <div className="py-[72px] sm:py-24 bg-[radial-gradient(ellipse_100%_50%_at_top_left,#364CE7,#0E0E0E_66%)]">
+    <div className="py-[72px] sm:py-24 bg-[radial-gradient(ellipse_100%_50%_at_top_left,#364CE7,#0E0E0E_66%)] px-8 lg:px-20">
       <h2 className="text-center font-bold text-2xl sm:text-6xl tracking-tight max-w-4xl mx-auto text-white">
         Discover the Power of Connection Through Sports
       </h2>
       <div className="max-w-xl mx-auto">
-        <p className="text-center mt-5 text-xl text-slate-300">
+        <p className="text-center mt-5 text-sm lg:text-xl text-slate-300">
           HAZLO brings people together to play, learn, and inspire each other.
           Explore our features designed to make sports more social, accessible,
           and fun.
@@ -76,7 +76,7 @@ export default function Features() {
       </div>
       <div className="container mx-auto max-w-6xl">
         <div
-          className="grid md:grid-cols-7 auto-rows-[200px] gap-4 mt-10 mx-auto"
+          className="grid grid-cols-1 lg:grid-cols-7 lg:auto-rows-[200px] gap-4 mt-10 mx-auto"
           ref={ref}
         >
           {features.map((item, i) => {
@@ -94,7 +94,7 @@ export default function Features() {
                 transition={{ duration: 0.5, delay: i * 0.2 }}
                 style={{ background: item.borderGradient }}
                 className={`flex flex-col text-center rounded-lg p-[2px] ${
-                  isBigItem ? "col-span-4" : "col-span-3"
+                  isBigItem ? "lg:col-span-4" : "lg:col-span-3"
                 }`}
               >
                 <div className="flex flex-col bg-background rounded-lg p-4 justify-center items-center gap-5 h-full w-full">
@@ -102,7 +102,9 @@ export default function Features() {
                   <h4 className="font-semibold text-2xl text-white">
                     {item.title}
                   </h4>
-                  <p className="text-gray-500 text-md">{item.description}</p>
+                  <p className="text-gray-500 text-sm lg:text-md">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             );

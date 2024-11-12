@@ -50,7 +50,7 @@ export function Hero({ ctaRef }: HeroProps) {
   };
 
   return (
-    <section className="py-24 lg:py-48 bg-[radial-gradient(ellipse_100%_50%_at_bottom_left,#364CE7,#0E0E0E_66%)]">
+    <section className="py-24 lg:py-48 bg-[radial-gradient(ellipse_100%_50%_at_bottom_left,#364CE7,#0E0E0E_66%)] px-8 lg:px-24">
       <div className="relative overflow-clip">
         <div className="container mx-auto">
           <div className="flex items-center justify-center">
@@ -77,7 +77,7 @@ export function Hero({ ctaRef }: HeroProps) {
             </div>
           </div>
           <div className="flex justify-center">
-            <p className="text-center text-xl mt-8 max-w-md text-slate-300">
+            <p className="text-center text-md lg:text-xl mt-8 max-w-md text-slate-300">
               Join a vibrant community where everyone can connect, get inspired,
               and pursue a healthier lifestyle. Whether you’re a seasoned
               athlete or just starting out, share your progress, create events,
