@@ -5,7 +5,7 @@ import { Button } from "../ui/Buttons";
 
 export default function Navbar() {
   return (
-    <div className="bg-background">
+    <div className="sticky top-0 backdrop-blur-sm">
       <div className="px-4">
         <div className="py-4 flex items-center justify-between">
           <div className="relative">

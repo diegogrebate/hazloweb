@@ -21,6 +21,8 @@ const config: Config = {
         },
         hazloGreen: "hsl(var(--hazloGreen))",
         hazloDarkGreen: "hsl(var(--hazloDarkGreen))",
+        hazloPink: "hsl(var(--hazloPink))",
+        hazloDarkPink: "hsl(var(--hazloDarkPink))",
       },
     },
   },

@@ -2,37 +2,52 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Calendar, GraduationCap, Heart, User } from "lucide-react";
+import {
+  Calendar,
+  GraduationCap,
+  Heart,
+  HeartPulse,
+  User,
+  Users,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 const features = [
   {
     id: 0,
-    icon: User,
-    title: "Connect with Players",
+    icon: Users,
+    title: "Connect With Players",
     description:
-      "Discover and connect with people who share your passion for sports, whether they're nearby or part of a global community.",
+      "Discover and connectwith people who share you passion for sports, wether they 're nearby or part of a global community.",
+    borderGradient:
+      "linear-gradient(to right, rgba(0, 230, 118, 0.6), rgba(0, 153, 204, 0.6))",
   },
   {
     id: 1,
     icon: Calendar,
     title: "Create and Join Events",
     description:
-      "Organize sports events with friends or join public events to meet new players and get active together.",
+      "Organize sports events with friends or join public events to meet new layers and get active together.",
+    borderGradient:
+      "linear-gradient(to right, rgba(34, 139, 229, 0.6), rgba(136, 60, 235, 0.6))",
   },
   {
     id: 2,
-    icon: GraduationCap,
+    icon: User,
     title: "Find and Book Coaches",
     description:
       "Improve your skills by booking sessions with rated and reviewed coaches, making it easier to find the right fit for you.",
+    borderGradient:
+      "linear-gradient(to right, rgba(255, 182, 77, 0.6), rgba(255, 133, 51, 0.6))",
   },
   {
     id: 3,
-    icon: Heart,
-    title: "Share Your Journey",
+    icon: HeartPulse,
+    title: "Find and Provide Services",
     description:
-      "Post photos, videos, and updates to inspire others and celebrate a healthier lifestyle with the HAZLO community.",
+      "Access wellness services like nutricionists, physical therapists, sports psychologists, etc., to support every step of you journey wether you are improving fitness, recovering, or staying healthy.",
+    borderGradient:
+      "linear-gradient(to right, rgba(255, 77, 148, 0.6), rgba(153, 0, 153, 0.6))",
   },
 ];
 
@@ -48,12 +63,12 @@ export default function Features() {
   }, []);
 
   return (
-    <div className="bg-background text-white py-[72px] sm:py-24">
-      <h2 className="text-center font-bold text-2xl sm:text-6xl tracking-tight max-w-4xl mx-auto">
+    <div className="py-[72px] sm:py-24 bg-[radial-gradient(ellipse_100%_50%_at_top_left,#364CE7,#0E0E0E_66%)]">
+      <h2 className="text-center font-bold text-2xl sm:text-6xl tracking-tight max-w-4xl mx-auto text-white">
         Discover the Power of Connection Through Sports
       </h2>
       <div className="max-w-xl mx-auto">
-        <p className="text-center mt-5 text-xl text-white/70">
+        <p className="text-center mt-5 text-xl text-slate-300">
           HAZLO brings people together to play, learn, and inspire each other.
           Explore our features designed to make sports more social, accessible,
           and fun.
@@ -66,7 +81,6 @@ export default function Features() {
         >
           {features.map((item, i) => {
             const isBigItem = i === 0 || i === 3;
-            const isSmallItem = i === 1 || i === 2;
             const animationDirection = isBigItem ? "left" : "right";
 
             return (
@@ -78,15 +92,16 @@ export default function Features() {
                 }}
                 animate={mounted && inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.2 }}
+                style={{ background: item.borderGradient }}
                 className={`flex flex-col text-center rounded-lg p-[2px] ${
-                  isBigItem
-                    ? "col-span-4 bg-[linear-gradient(to_right,rgba(14,168,245,0.6),rgba(105,46,248,0.6))]"
-                    : ""
-                } ${isSmallItem ? "col-span-3 bg-white/30" : ""}`}
+                  isBigItem ? "col-span-4" : "col-span-3"
+                }`}
               >
                 <div className="flex flex-col bg-background rounded-lg p-4 justify-center items-center gap-5 h-full w-full">
                   <item.icon size={24} color="white" />
-                  <h4 className="font-semibold text-2xl">{item.title}</h4>
+                  <h4 className="font-semibold text-2xl text-white">
+                    {item.title}
+                  </h4>
                   <p className="text-gray-500 text-md">{item.description}</p>
                 </div>
               </motion.div>

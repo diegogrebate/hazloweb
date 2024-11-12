@@ -77,7 +77,7 @@ function AccordionItem({
 
 export function FAQs() {
   return (
-    <div className="text-white bg-gradient-to-b from-[#0EA8F5] to-[#0E0E0E] py-[72px] sm:py-24">
+    <div className="text-white bg-gradient-to-b from-[#364CE7] to-[#0E0E0E] py-[72px] sm:py-24">
       <div className="container mx-auto">
         <h2 className="text-center text-5xl sm:text-6xl sm:max-w-[648px] mx-auto font-bold tracking-tighter">
           Frecuently Asked Questions

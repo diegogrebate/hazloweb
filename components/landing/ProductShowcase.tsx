@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import productImage from "@/public/app-screen.png";
+import atlanta from "@/public/atlanta.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -15,7 +15,7 @@ export function ProductShowcase() {
   const rotateX = useTransform(scrollYProgress, [0, 1], [15, 0]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   return (
-    <div className="text-white bg-gradient-to-b from-[#0E0E0E] to-[#0EA8F5] py-[72px] sm:py-24">
+    <div className="text-white bg-gradient-to-b from-[#0E0E0E] to-[#364CE7] py-[72px] sm:py-24">
       <div className="container relative mx-auto">
         <h2 className="text-center text-5xl sm:text-6xl font-bold tracking-tighter">
           Experience Sports Like Never Before
@@ -30,13 +30,13 @@ export function ProductShowcase() {
           style={{
             opacity: opacity,
             rotateX: rotateX,
-            transformPerspective: "800px",
+            transformPerspective: "1000px",
           }}
         >
           <Image
-            src={productImage}
+            src={atlanta}
             alt="Product Screenshot"
-            className="mt-14 mx-auto"
+            className="mt-14 mx-auto rounded-lg max-w-6xl"
             ref={appImage}
           />
         </motion.div>
