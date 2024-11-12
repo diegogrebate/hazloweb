@@ -8,10 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        background: "hsl(var(--background))",
+        blue: "hsl(var(--blue))",
+        purple: "hsl(var(--purple))",
+        orange: "hsl(var(--orange))",
+        darkOrange: "hsl(var(--darkOrange))",
+        border: "hsl(var(--border))",
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        hazloGreen: "hsl(var(--hazloGreen))",
+        hazloDarkGreen: "hsl(var(--hazloDarkGreen))",
       },
     },
   },
