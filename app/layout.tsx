@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
+import { Insights } from "@/components/insights";
 
 export const metadata: Metadata = {
   title: "Hazlo - Connect, Play, and Inspire | Sports Community",
@@ -50,6 +51,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {children}
+        <Insights />
       </body>
     </html>
   );

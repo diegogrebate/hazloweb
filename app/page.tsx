@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { CTA } from "@/components/landing/CTA";
 import { FAQs } from "@/components/landing/FAQs";
-import Features from "@/components/landing/Features";
+import { Features } from "@/components/landing/Features";
 import { Footer } from "@/components/landing/Footer";
 import { Hero } from "@/components/landing/Hero";
 import Navbar from "@/components/landing/Navbar";

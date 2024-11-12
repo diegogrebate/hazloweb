@@ -50,7 +50,7 @@ export function Hero({ ctaRef }: HeroProps) {
   };
 
   return (
-    <section className="py-24 lg:py-48 bg-[radial-gradient(ellipse_100%_50%_at_bottom_left,#364CE7,#0E0E0E_66%)] px-8 lg:px-24">
+    <section className="py-20 lg:py-48 bg-[radial-gradient(ellipse_100%_50%_at_bottom_left,#364CE7,#0E0E0E_66%)] px-8 lg:px-24">
       <div className="relative overflow-clip">
         <div className="container mx-auto">
           <div className="flex items-center justify-center">

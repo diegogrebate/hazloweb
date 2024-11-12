@@ -51,7 +51,7 @@ const features = [
   },
 ];
 
-export default function Features() {
+export function Features() {
   const [mounted, setMounted] = useState(false);
   const [ref, inView] = useInView({
     triggerOnce: true,
