@@ -20,7 +20,7 @@ const features = [
     description:
       "Discover and connect with people who share your passion for sports, whether they're nearby or part of a global community.",
     borderGradient:
-      "linear-gradient(to right, rgba(0, 230, 118, 0.6), rgba(0, 153, 204, 0.6))",
+      "linear-gradient(to right, rgba(0, 230, 118, 0.8), rgba(0, 153, 204, 0.8))",
   },
   {
     id: 1,
@@ -29,7 +29,7 @@ const features = [
     description:
       "Organize sports events with friends or join public events to meet new players and get active together.",
     borderGradient:
-      "linear-gradient(to right, rgba(34, 139, 229, 0.6), rgba(136, 60, 235, 0.6))",
+      "linear-gradient(to right, rgba(34, 139, 229, 0.8), rgba(136, 60, 235, 0.8))",
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const features = [
     description:
       "Improve your skills by booking sessions with rated and reviewed coaches, making it easier to find the right fit for you.",
     borderGradient:
-      "linear-gradient(to right, rgba(255, 182, 77, 0.6), rgba(255, 133, 51, 0.6))",
+      "linear-gradient(to right, rgba(255, 182, 77, 0.8), rgba(255, 133, 51, 0.8))",
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const features = [
     description:
       "Access wellness services like nutritionists, physical therapists, sports psychologists, etc., to support every step of your journey, whether you're improving fitness, recovering, or staying healthy.",
     borderGradient:
-      "linear-gradient(to right, rgba(255, 77, 148, 0.6), rgba(153, 0, 153, 0.6))",
+      "linear-gradient(to right, rgba(255, 77, 148, 0.8), rgba(153, 0, 153, 0.8))",
   },
 ];
 

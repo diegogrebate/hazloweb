@@ -50,7 +50,7 @@ export function Hero({ ctaRef }: HeroProps) {
   };
 
   return (
-    <section className="py-20 lg:py-48 bg-[radial-gradient(ellipse_100%_50%_at_bottom_left,#364CE7,#0E0E0E_66%)] px-8 lg:px-24">
+    <section className="py-20 lg:py-44 bg-[radial-gradient(ellipse_100%_50%_at_bottom_left,#364CE7,#0E0E0E_66%)] px-8 lg:px-24">
       <div className="relative overflow-clip">
         <div className="container mx-auto">
           <div className="flex items-center justify-center">
@@ -61,7 +61,7 @@ export function Hero({ ctaRef }: HeroProps) {
                 className="absolute inset-0 -m-px border border-[#364CE7] rounded-lg "
               />
               <p className="flex items-center gap-2 text-slate-400">
-                Introducing the
+                ✨ Introducing the
                 <span className="bg-[linear-gradient(to_right,#0EA8F5,#692EF8)] text-transparent bg-clip-text [-webkit-background-clip:text]">
                   Hazlo
                 </span>

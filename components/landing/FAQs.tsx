@@ -81,7 +81,7 @@ export function FAQs() {
     <div className="text-white bg-gradient-to-b from-[#364CE7] to-[#0E0E0E] py-[72px] sm:py-24 px-8 lg:px-20">
       <div className="container mx-auto">
         <h2 className="text-center text-2xl lg:text-5xl sm:text-6xl sm:max-w-[648px] mx-auto font-bold tracking-tighter">
-          Frecuently Asked Questions
+          Frequently Asked Questions
         </h2>
         <div className="mt-12 max-w-[648px] mx-auto">
           {items.map((item) => (

@@ -31,7 +31,7 @@ export function ServicesChart() {
   }, []);
 
   return (
-    <Card className="bg-[linear-gradient(to_right,rgba(0,229,130,0.6),rgba(0,158,204,0.6))] h-full">
+    <Card className="bg-[linear-gradient(to_right,rgba(255,77,148,0.6),rgba(153,0,153,0.6))] h-full">
       <CardHeader>
         <CardTitle>Hazlo Services</CardTitle>
         <CardDescription>Total Amount of Services</CardDescription>

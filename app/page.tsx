@@ -7,7 +7,6 @@ import { Features } from "@/components/landing/Features";
 import { Footer } from "@/components/landing/Footer";
 import { Hero } from "@/components/landing/Hero";
 import Navbar from "@/components/landing/Navbar";
-import { ProductShowcase } from "@/components/landing/ProductShowcase";
 
 export default function Home() {
   const ctaRef = useRef<HTMLDivElement>(null);
@@ -17,7 +16,6 @@ export default function Home() {
       <Navbar />
       <Hero ctaRef={ctaRef} />
       <Features />
-      <ProductShowcase />
       <FAQs />
       <div ref={ctaRef}>
         <CTA />
