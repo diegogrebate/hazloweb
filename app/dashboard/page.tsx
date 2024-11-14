@@ -1,9 +1,9 @@
-import { NumberCoaches } from "@/components/charts/NumberCoaches";
-import { ServicesChart } from "@/components/charts/ServicesChart";
-import { TotalUsers } from "@/components/charts/TotalUsers";
-import { UserGenderChart } from "@/components/charts/UserGenderChart";
+import { HazloCoachesNumber } from "@/components/charts/HazloCoachesNumber";
+import { HazloServicesNumber } from "@/components/charts/HazloServicesNumber";
+import { HazloUsersGenderPie } from "@/components/charts/HazloUsersGenderPie";
+import { HazloUsersNumber } from "@/components/charts/HazloUsersNumber";
+import { HazloVerifiedUsersNumber } from "@/components/charts/HazloVerifiedUsersNumber";
 import { UsersPerMonth } from "@/components/charts/UsersPerMonth";
-import { VerifiedUsers } from "@/components/charts/VerifiedUsers";
 import { WaitlistTable } from "@/components/charts/WaitlistTable";
 import { WaitlistUsers } from "@/components/charts/WaitlistUsers";
 
@@ -15,23 +15,23 @@ export default async function DashboardPage() {
         <h2 className="text-3xl text-white font-bold">Statistics</h2>
         <div className="grid grid-cols-4 gap-8">
           <div className="col-span-1 h-[250px]">
-            <TotalUsers />
+            <HazloUsersNumber />
           </div>
           <div className="col-span-1 h-[250px]">
-            <VerifiedUsers />
+            <HazloVerifiedUsersNumber />
           </div>
           <div className="col-span-1 h-[250px]">
-            <NumberCoaches />
+            <HazloCoachesNumber />
           </div>
           <div className="col-span-1 h-[250px]">
-            <ServicesChart />
+            <HazloServicesNumber />
           </div>
         </div>
       </div>
       {/*Second Row */}
       <div className="grid grid-cols-5 gap-8">
         <div className="col-span-2 h-[450px]">
-          <UserGenderChart />
+          <HazloUsersGenderPie />
         </div>
         <div className="col-span-3 h-[450px]">
           <UsersPerMonth />

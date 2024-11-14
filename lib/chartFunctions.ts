@@ -2,7 +2,7 @@
 
 import { createClient } from "@/utils/supabase/server";
 
-export async function getTotalUsers() {
+export async function getHazloUsersNumber() {
   const supabase = await createClient();
 
   const { data, error } = await supabase
@@ -13,7 +13,7 @@ export async function getTotalUsers() {
   return { success: true, data: data.length };
 }
 
-export async function getVerifiedUsers() {
+export async function getVerifiedUsersNumber() {
   const supabase = await createClient();
 
   const { data, error } = await supabase
@@ -25,7 +25,7 @@ export async function getVerifiedUsers() {
   return { success: true, data: data.length };
 }
 
-export async function getCoachesNumber() {
+export async function getHazloCoachesNumber() {
   const supabase = await createClient();
 
   const { data, error } = await supabase
@@ -37,7 +37,19 @@ export async function getCoachesNumber() {
   return { success: true, data: data.length };
 }
 
-export async function getServicesNumber() {
+export async function getHazloCoaches() {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("users")
+    .select("id, name, username, email")
+    .eq("role", "coach");
+
+  if (error) return { success: false, msg: error.message };
+  return { success: true, data: data };
+}
+
+export async function getHazloServicesNumber() {
   const supabase = await createClient();
 
   const { data, error } = await supabase
@@ -49,7 +61,7 @@ export async function getServicesNumber() {
   return { success: true, data: data.length };
 }
 
-export async function getMaleUsers() {
+export async function getHazloMaleUsersNumber() {
   const supabase = await createClient();
 
   const { data, error } = await supabase
@@ -61,7 +73,7 @@ export async function getMaleUsers() {
   return { success: true, data: data.length };
 }
 
-export async function getFemaleUsers() {
+export async function getHazloFemaleUsersHazlo() {
   const supabase = await createClient();
 
   const { data, error } = await supabase
@@ -73,7 +85,7 @@ export async function getFemaleUsers() {
   return { success: true, data: data.length };
 }
 
-export async function getOtherGenderUsers() {
+export async function getHazloOtherGenderUsersNumber() {
   const supabase = await createClient();
 
   const { data, error } = await supabase

@@ -1,11 +1,6 @@
 "use client";
 
 import {
-  getFemaleUsers,
-  getMaleUsers,
-  getOtherGenderUsers,
-} from "@/lib/chartFunctions";
-import {
   Card,
   CardContent,
   CardDescription,
@@ -15,9 +10,14 @@ import {
 } from "@/components/ui/Card";
 import { FormError } from "@/components/form/FormError";
 import React, { useState, useEffect } from "react";
-import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
+import { PieChart, Pie, Cell, Tooltip } from "recharts";
+import {
+  getHazloFemaleUsersHazlo,
+  getHazloMaleUsersNumber,
+  getHazloOtherGenderUsersNumber,
+} from "@/lib/chartFunctions";
 
-export function UserGenderChart() {
+export function HazloUsersGenderPie() {
   const [maleCount, setMaleCount] = useState<number | undefined>(0);
   const [femaleCount, setFemaleCount] = useState<number | undefined>(0);
   const [other, setOther] = useState<number | undefined>(0);
@@ -26,21 +26,21 @@ export function UserGenderChart() {
   useEffect(() => {
     // Fetch the male and female user count from Supabase
     const fetchData = async () => {
-      const res = await getMaleUsers();
+      const res = await getHazloMaleUsersNumber();
       if (res.success) {
         setMaleCount(res.data);
       } else {
         setError(res.msg);
       }
 
-      const res2 = await getFemaleUsers();
+      const res2 = await getHazloFemaleUsersHazlo();
       if (res2.success) {
         setFemaleCount(res2.data);
       } else {
         setError(res2.msg);
       }
 
-      const res3 = await getOtherGenderUsers();
+      const res3 = await getHazloOtherGenderUsersNumber();
       if (res3.success) {
         setOther(res3.data);
       } else {

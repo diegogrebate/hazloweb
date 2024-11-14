@@ -10,16 +10,16 @@ import {
 } from "@/components/ui/Card";
 import { FormError } from "@/components/form/FormError";
 import { useEffect, useState } from "react";
-import { getVerifiedUsers } from "@/lib/chartFunctions";
 import Loading from "@/components/charts/Loader";
+import { getHazloServicesNumber } from "@/lib/chartFunctions";
 
-export function VerifiedUsers() {
+export function HazloServicesNumber() {
   const [data, setData] = useState<number | undefined>(undefined);
   const [error, setError] = useState<string | undefined>("");
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await getVerifiedUsers();
+      const res = await getHazloServicesNumber();
       if (res.success) {
         setData(res.data);
       } else {
@@ -31,13 +31,13 @@ export function VerifiedUsers() {
   }, []);
 
   return (
-    <Card className="bg-[linear-gradient(to_right,rgba(14,168,245,0.6),rgba(105,46,248,0.6))] h-full">
+    <Card className="bg-[linear-gradient(to_right,rgba(255,77,148,0.6),rgba(153,0,153,0.6))] h-full">
       <CardHeader>
-        <CardTitle>Hazlo Plus Members</CardTitle>
-        <CardDescription>Total Amount of Verified Users</CardDescription>
+        <CardTitle>Hazlo Services</CardTitle>
+        <CardDescription>Total Amount of Services</CardDescription>
       </CardHeader>
       <CardContent>
-        <h2 className="text-5xl text-white font-bold flex items-center justify-center h-32">
+        <h2 className="text-5xl text-white font-bold flex items-center justify-center">
           {data !== undefined ? data : <Loading />}
         </h2>
       </CardContent>

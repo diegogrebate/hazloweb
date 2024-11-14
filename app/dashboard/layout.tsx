@@ -3,6 +3,8 @@ import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 import { ReactNode } from "react";
 import { Logo } from "@/components/shared/Logo";
+import Link from "next/link";
+import { DashboardNavLinks } from "@/components/dashboard/DashboardNavLinks";
 
 export default async function DashboardLayout({
   children,
@@ -23,6 +25,11 @@ export default async function DashboardLayout({
       <header className="flex justify-between items-center py-2 px-8 border-b border-border bg-[#222222]">
         <div className="flex items-center">
           <Logo />
+        </div>
+        <div className="flex-1 ml-10">
+          <nav className="flex flex-row items-start px-2 lg:px-4">
+            <DashboardNavLinks />
+          </nav>
         </div>
         <div className="flex items-center">
           <LogoutButton />
