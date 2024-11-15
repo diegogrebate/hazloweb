@@ -102,7 +102,7 @@ export async function getUsersPerMonth() {
   const { data, error } = await supabase
     .from("users")
     .select("created_at")
-    .gte("created_at", `${new Date().getFullYear()}-01-01T00:00:00Z`) // Current year only
+    .gte("created_at", `${new Date().getFullYear()}-01-01T00:00:00Z`)
     .lte("created_at", `${new Date().getFullYear()}-12-31T23:59:59Z`)
     .order("created_at", { ascending: true });
 
@@ -114,7 +114,7 @@ export async function getUsersPerMonth() {
   // Group users by month
   const monthlyUserCount = Array(12).fill(0);
   data.forEach((user) => {
-    const month = new Date(user.created_at).getMonth(); // 0-based index for months
+    const month = new Date(user.created_at).getMonth();
     monthlyUserCount[month] += 1;
   });
 
@@ -145,8 +145,46 @@ export async function getWaitlistUsers() {
 export async function getWaitlistInfo() {
   const supabase = await createClient();
 
-  const { data, error } = await supabase.from("waitlist").select("*");
+  const { data, error } = await supabase
+    .from("waitlist")
+    .select("*")
+    .order("created_at", { ascending: false });
 
   if (error) return { success: false, msg: error.message };
   return { success: true, data: data };
+}
+
+export async function getPostsNumber() {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("posts")
+    .select("id", { count: "exact" });
+
+  if (error) return { success: false, msg: error.message };
+  return { success: true, data: data.length };
+}
+
+export async function getPostsImageNumber() {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("posts")
+    .select("file", { count: "exact" })
+    .ilike("file", "%.png");
+
+  if (error) return { success: false, msg: error.message };
+  return { success: true, data: data.length };
+}
+
+export async function getPostsVideoNumber() {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("posts")
+    .select("file", { count: "exact" })
+    .ilike("file", "%.mp4");
+
+  if (error) return { success: false, msg: error.message };
+  return { success: true, data: data.length };
 }
