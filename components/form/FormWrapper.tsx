@@ -25,7 +25,7 @@ export function FormWrapper({
   title,
 }: FromWrapperProps) {
   return (
-    <Card className="w-[400px]">
+    <Card className="w-[400px] h-auto">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>

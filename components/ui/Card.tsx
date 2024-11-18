@@ -11,7 +11,7 @@ export function Card({
   return (
     <div
       className={clsx(
-        "rounded-lg border border-border bg-[#222222] text-white flex flex-col h-full",
+        "rounded-lg border border-border bg-[#222222] text-white",
         className
       )}
     >
@@ -60,7 +60,11 @@ export function CardDescription({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <p className={clsx("text-sm text-white/70", className)}>{children}</p>;
+  return (
+    <p className={clsx("text-sm text-white/70 items-start w-full", className)}>
+      {children}
+    </p>
+  );
 }
 
 export function CardContent({
@@ -70,16 +74,7 @@ export function CardContent({
   children: React.ReactNode;
   className?: string;
 }) {
-  return (
-    <div
-      className={clsx(
-        "p-6 pt-0 flex-grow flex items-center justify-center",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
+  return <div className={clsx("p-6 pt-0", className)}>{children}</div>;
 }
 
 export function CardFooter({

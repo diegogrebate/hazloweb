@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     "sports app",
     "sports coaching",
   ],
+  icons: {
+    icon: "/icon.png",
+  },
   openGraph: {
     title: "Hazlo - Connect, Play, and Inspire | Sports Community",
     description:
