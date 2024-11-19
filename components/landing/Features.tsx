@@ -102,7 +102,7 @@ export function Features() {
                   <h4 className="font-semibold text-2xl text-white">
                     {item.title}
                   </h4>
-                  <p className="text-gray-500 text-sm lg:text-md">
+                  <p className="text-gray-400 text-sm lg:text-md">
                     {item.description}
                   </p>
                 </div>

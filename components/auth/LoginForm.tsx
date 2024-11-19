@@ -57,8 +57,8 @@ export function LoginForm() {
     <FormWrapper
       title="Login"
       description="Welcome Back!"
-      buttonHref="/login"
-      buttonLabel="Only Authorized Users"
+      buttonHref="/"
+      buttonLabel="Only Authorized Users. Go back"
     >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

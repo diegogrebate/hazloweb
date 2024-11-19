@@ -3,8 +3,9 @@ import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 import { ReactNode } from "react";
 import { Logo } from "@/components/shared/Logo";
-import Link from "next/link";
 import { DashboardNavLinks } from "@/components/dashboard/DashboardNavLinks";
+import Link from "next/link";
+import { Button } from "@/components/ui/Buttons";
 
 export default async function DashboardLayout({
   children,
@@ -31,7 +32,10 @@ export default async function DashboardLayout({
             <DashboardNavLinks />
           </nav>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
+          <Link href={"/home"}>
+            <Button variant="outline">App</Button>
+          </Link>
           <LogoutButton />
         </div>
       </header>

@@ -13,9 +13,9 @@ export default function Navbar() {
             <Image src={logo} alt="Logo Image" className="size-12 relative" />
           </div>
           <nav className="hidden sm:flex gap-6 items-center">
-            <Button className="px-5 py-3">
-              <Link href={"/login"}>Access</Link>
-            </Button>
+            <Link href={"/login"}>
+              <Button className="px-5 py-3">Access</Button>
+            </Link>
           </nav>
         </div>
       </div>
