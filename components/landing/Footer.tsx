@@ -3,7 +3,7 @@ import LinkedInIcon from "@/public/icons/linkedin.svg";
 
 export function Footer() {
   return (
-    <footer className="py-5 bg-background text-slate-400 border-t border-slate-700">
+    <footer className="py-5 bg-background text-white/60 border-t border-white/30">
       <div className="container mx-auto">
         <div className="flex flex-col sm:flex-row sm:justify-between gap-4">
           <div className="text-center">

@@ -11,13 +11,14 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/Form";
 import { FormError } from "../form/FormError";
 import { SubmitButton } from "../ui/Buttons";
 import { FormSuccess } from "../form/FormSuccess";
 import { Input } from "../ui/Input";
+import Image from "next/image";
+import wistle from "@/public/landing/wistle.png";
 
 export function CTA() {
   const [error, setError] = useState<string | undefined>("");
@@ -52,20 +53,30 @@ export function CTA() {
       .finally(() => setIsPending(false));
   };
   return (
-    <div className="bg-background text-white py-[72px] sm:py-24 text-center px-8 lg:px-20">
+    <div className="text-white py-[72px] sm:py-24 text-center px-8 lg:px-20">
       <div className="container max-w-xl mx-auto">
-        <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">
-          Be the First
-        </h2>
+        <div className="flex items-center space-x-4">
+          {" "}
+          <Image
+            src={wistle}
+            alt=""
+            height={100}
+            width={100}
+            className="max-w-none"
+          />
+          <h2 className="text-4xl sm:text-6xl font-bold tracking-tighter">
+            Be the First
+          </h2>
+        </div>
         <p className="text-md lg:text-xl text-white/70 mt-5">
-          Don’t miss out! Join the HAZLO waitlist to connect, compete, and
-          inspire. Be part of a sports community built to elevate your active
-          lifestyle.
+          It’s your world of sports, all in one app. Welcome to Hazlo. <br />{" "}
+          Don’t miss out! Join the Hazlo wait list.
+          <br /> Be part of the best sports community since day 1
         </p>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-row gap-4 items-center mt-5 max-w-3xl w-full mx-auto"
+            className="flex flex-row gap-4 items-center mt-16 max-w-3xl w-full mx-auto"
           >
             <div className="flex-grow">
               <FormField

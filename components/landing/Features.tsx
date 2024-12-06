@@ -63,12 +63,12 @@ export function Features() {
   }, []);
 
   return (
-    <div className="py-[72px] sm:py-24 bg-[radial-gradient(ellipse_100%_50%_at_top_left,#364CE7,#0E0E0E_66%)] px-8 lg:px-20">
+    <div className="py-[72px] sm:py-24 px-8 lg:px-20">
       <h2 className="text-center font-bold text-2xl sm:text-6xl tracking-tight max-w-4xl mx-auto text-white">
         Discover the Power of Connection Through Sports
       </h2>
       <div className="max-w-xl mx-auto">
-        <p className="text-center mt-5 text-sm lg:text-xl text-slate-300">
+        <p className="text-center mt-5 text-sm lg:text-xl text-white/70">
           HAZLO brings people together to play, learn, and inspire each other.
           Explore our features designed to make sports more social, accessible,
           and fun.
@@ -102,7 +102,7 @@ export function Features() {
                   <h4 className="font-semibold text-2xl text-white">
                     {item.title}
                   </h4>
-                  <p className="text-gray-400 text-sm lg:text-md">
+                  <p className="text-white/50 text-sm lg:text-md">
                     {item.description}
                   </p>
                 </div>
@@ -110,6 +110,15 @@ export function Features() {
             );
           })}
         </div>
+      </div>
+      <h3 className="text-center font-bold text-xl sm:text-3xl tracking-tight max-w-4xl mx-auto text-white mt-12">
+        Share Your Journey
+      </h3>
+      <div className="max-w-2xl mx-auto">
+        <p className="text-center mt-4 text-sm lg:text-xl text-white/70">
+          Post photos, videos, and updates to inspire others and celebrate a
+          healthier lifestyle with the HAZLO community
+        </p>
       </div>
     </div>
   );
