@@ -19,7 +19,12 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <LinkedInIcon />
+              <a
+                href="https://www.linkedin.com/company/hazlosports"
+                target="_blank"
+              >
+                <LinkedInIcon />
+              </a>
             </li>
           </ul>
         </div>
