@@ -67,9 +67,9 @@ export function Hero({ ctaRef }: HeroProps) {
               />
               <p className="flex items-center gap-2 text-white">
                 Introducing the
-                <span className="bg-[linear-gradient(to_right,#0EA8F5,#692EF8)] text-transparent bg-clip-text [-webkit-background-clip:text]">
+                <h1 className="bg-[linear-gradient(to_right,#0EA8F5,#692EF8)] text-transparent bg-clip-text [-webkit-background-clip:text]">
                   Hazlo
-                </span>
+                </h1>
                 app
               </p>
             </div>
@@ -118,9 +118,10 @@ export function Hero({ ctaRef }: HeroProps) {
               }}
             >
               <div className="flex flex-col bg-background rounded-lg p-2 justify-center items-center gap-5 h-full w-full">
-                <p className="text-white max-w-xl font-medium text-3xl">
-                  Wecome to Hazlo - The Best Sports Social Network for Everyone!
-                </p>
+                <h2 className="text-white max-w-xl font-medium text-3xl">
+                  Wecome to Hazlo - The Best Sh2orts Social Network for
+                  Everyone!
+                </h2>
               </div>
             </div>
           </div>
