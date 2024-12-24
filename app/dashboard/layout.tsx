@@ -4,8 +4,6 @@ import { redirect } from "next/navigation";
 import { ReactNode } from "react";
 import { Logo } from "@/components/shared/Logo";
 import { DashboardNavLinks } from "@/components/dashboard/DashboardNavLinks";
-import Link from "next/link";
-import { Button } from "@/components/ui/Buttons";
 
 export default async function DashboardLayout({
   children,

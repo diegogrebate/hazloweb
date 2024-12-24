@@ -67,9 +67,9 @@ export function Hero({ ctaRef }: HeroProps) {
               />
               <p className="flex items-center gap-2 text-white">
                 Introducing the
-                <h1 className="bg-[linear-gradient(to_right,#0EA8F5,#692EF8)] text-transparent bg-clip-text [-webkit-background-clip:text]">
+                <span className="bg-[linear-gradient(to_right,#0EA8F5,#692EF8)] text-transparent bg-clip-text [-webkit-background-clip:text]">
                   Hazlo
-                </h1>
+                </span>
                 app
               </p>
             </div>
