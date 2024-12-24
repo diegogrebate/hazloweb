@@ -119,8 +119,7 @@ export function Hero({ ctaRef }: HeroProps) {
             >
               <div className="flex flex-col bg-background rounded-lg p-2 justify-center items-center gap-5 h-full w-full">
                 <h2 className="text-white max-w-xl font-medium text-3xl">
-                  Wecome to Hazlo - The Best Sh2orts Social Network for
-                  Everyone!
+                  Wecome to Hazlo - The Best Sports Social Network for Everyone!
                 </h2>
               </div>
             </div>
