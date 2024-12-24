@@ -33,9 +33,6 @@ export default async function DashboardLayout({
           </nav>
         </div>
         <div className="flex items-center gap-2">
-          <Link href={"/home"}>
-            <Button variant="outline">App</Button>
-          </Link>
           <LogoutButton />
         </div>
       </header>
