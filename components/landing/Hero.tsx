@@ -7,7 +7,6 @@ import {
 } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { Button } from "../ui/Buttons";
-import Link from "next/link";
 import Image from "next/image";
 import Basketball from "@/public/landing/Basketball.png";
 import Gymming from "@/public/landing/Gymming.png";
@@ -162,9 +161,7 @@ export function Hero({ ctaRef }: HeroProps) {
             </motion.div>
           </div>
           <div className="flex justify-center mt-12">
-            <Button onClick={handleScrollToCTA}>
-              <Link href={"/"}>Join the waitlist</Link>
-            </Button>
+            <Button onClick={handleScrollToCTA}>Join the waitlist</Button>
           </div>
         </div>
       </div>
